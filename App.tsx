@@ -1,12 +1,14 @@
-import * as Sentry from "@sentry/react-native";
-import Constants from "expo-constants";
-import App from "./src/index";
+// import * as Sentry from "@sentry/react-native";
+// import Constants from "expo-constants";
+import App from "./src/index"
+import "./src/style/global.css"
 
-const SENTRY_DSN = Constants?.expoConfig?.extra?.SENTRY_DSN;
+// const SENTRY_DSN = Constants?.expoConfig?.extra?.SENTRY_DSN;
 
-Sentry.init({
-  dsn: SENTRY_DSN,
-  tracesSampleRate: 1.0,
-});
+// Sentry.init({
+// dsn: SENTRY_DSN,
+// tracesSampleRate: 1.0,
+// });
 
-export default Sentry.wrap(App);
+// export default Sentry.wrap(App)
+export default App

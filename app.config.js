@@ -1,7 +1,7 @@
 export default {
   expo: {
-    name: "react-native-expo-pro-template",
-    slug: "react-native-expo-pro-template",
+    name: "kurdcars-app",
+    slug: "kurdcars-app",
     version: "1.0.0",
     orientation: "portrait",
     icon: "./assets/icon.png",

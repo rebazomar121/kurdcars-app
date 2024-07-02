@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-const nativewind = require("nativewind/tailwind/native")
-
 module.exports = {
-  content: ["./src/**/*.tsx", "./App.tsx", "./nativewind.config"],
+  content: [
+    "./App.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./web/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {},
   },
-  plugins: [nativewind()],
+  plugins: [],
 }
