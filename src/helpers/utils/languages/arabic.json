@@ -1,2 +1,8 @@
 {
+    "translation":{
+        "general": {
+            "networkLost":"فقد الاتصال بالشبكة",
+            "chooseLanguage":"اختر اللغة"
+        }
+    }
 }

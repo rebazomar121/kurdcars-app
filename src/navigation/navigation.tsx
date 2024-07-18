@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { NavigationContainer } from "@react-navigation/native"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { StatusBar, View } from "react-native"
 import { fontLoader } from "@helpers/utils/loadingFiles"
 import { I18nManager } from "react-native"
@@ -9,12 +8,16 @@ import * as Updates from "expo-updates"
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import { GENERAL_CONSTANTS } from "@src/constants/general.const"
 import AuthScreens from "./authScreens"
-
+import NetInfo from "@react-native-community/netinfo"
+import NetworkLost from "@components/layout/NetworkLost"
+import ChooseLang from "@components/layout/ChooseLang"
 
 const Navigation = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
+  const [isConnected, setIsConnected] = useState<any>(true)
+  const [isFirstTime, setIsFirstTime] = useState(true)
 
-  // load require files like
+  // load require files
   useEffect(() => {
     fontLoader({ setFontsLoaded })
     const defaultDirection = async () => {
@@ -29,10 +32,25 @@ const Navigation = () => {
         await Updates.reloadAsync()
       }
     }
+    const checkIsFirstTime = async () => {
+      let firstTime = await AsyncStorage.getItem(GENERAL_CONSTANTS.FIRST_TIME)
+      if (firstTime) setIsFirstTime(false)
+      else setIsFirstTime(true)
+    }
+    checkIsFirstTime()
     defaultDirection()
+    const unsubscribe: any = NetInfo.addEventListener((state) => {
+      return setIsConnected(state.isConnected)
+    })
+
+    return () => unsubscribe()
   }, [])
 
   if (!fontsLoaded) return <></>
+
+  if (isFirstTime) return <ChooseLang />
+
+  if (!isConnected) return <NetworkLost />
 
   return (
     <View

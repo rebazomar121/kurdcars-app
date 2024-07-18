@@ -20,15 +20,9 @@ i18n.use(initReactI18next).init({
   lng: "en",
   fallbackLng: "en",
   resources: {
-    en: {
-      translation: english,
-    },
-    ar: {
-      translation: arabic,
-    },
-    ku: {
-      translation: kurdish,
-    },
+    en: english,
+    ar: arabic,
+    ku: kurdish,
   },
   interpolation: {
     skipOnVariables: false,

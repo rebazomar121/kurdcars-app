@@ -7,7 +7,7 @@ export default {
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",
     splash: {
-      image: "./assets/splash.png",
+      image: "./assets/logo.png",
       resizeMode: "contain",
       backgroundColor: "#ffffff",
     },
@@ -17,12 +17,12 @@ export default {
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: "./assets/adaptive-icon.png",
+        foregroundImage: "./assets/logo.png",
         backgroundColor: "#ffffff",
       },
     },
     web: {
-      favicon: "./assets/favicon.png",
+      favicon: "./assets/logo.png",
     },
     extra: {
       SENTRY_DNS: "your-sentry-dns",

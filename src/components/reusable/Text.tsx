@@ -19,7 +19,10 @@ const CustomText: React.FC<Props> = ({
   }
 
   return (
-    <Text style={[styles, style]} className={`text-left  ${className}`}>
+    <Text
+      style={[styles, style]}
+      className={`text-left text-white ${className}`}
+    >
       {children}
     </Text>
   )

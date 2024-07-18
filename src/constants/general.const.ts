@@ -1,5 +1,6 @@
 // type any key you want to store in async storage
 const STORAGE_LANG = "lang"
+const FIRST_TIME = "firstTime"
 
 const LANG_OBJECT = {
   KU: "ku",
@@ -13,4 +14,5 @@ export const GENERAL_CONSTANTS = {
   STORAGE_LANG,
   LANG_OBJECT,
   LANG_LIST,
+  FIRST_TIME
 }

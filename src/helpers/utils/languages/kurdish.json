@@ -1,2 +1,8 @@
 {
+    "translation":{
+        "general": {
+            "networkLost":"پەیوەست بوون بە ئینتەرنێتەوە نیە",
+            "chooseLanguage":"زمان هەڵبژێرە"
+        }
+    }
 }
