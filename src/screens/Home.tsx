@@ -1,9 +1,9 @@
 import React from "react"
-import Text from "@components/reusable/Text"
 import Layout from "@src/components/layout/Layout"
 import ImageSlider from "@components/reusable/ImageSlider"
 import ExplorerCar from "@src/components/car/ExplorerCar"
 import Divider from "@src/components/reusable/Divider"
+import ScrollRefresh from "@components/reusable/ScrollRefetch"
 
 const images = [
   "https://www.carscoops.com/wp-content/uploads/2022/04/Ford-Taurus.jpg",
@@ -17,9 +17,11 @@ const images = [
 const Home: React.FC = () => {
   return (
     <Layout>
-      <ImageSlider images={images} />
-      <Divider classNameDivider="my-4" showTooltip={false} />
-      <ExplorerCar />
+      <ScrollRefresh marginBottom={0}>
+        <ImageSlider images={images} />
+        <Divider classNameDivider="my-4" showTooltip={false} />
+        <ExplorerCar />
+      </ScrollRefresh>
     </Layout>
   )
 }

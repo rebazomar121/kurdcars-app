@@ -25,7 +25,7 @@ const FlatLabel: Type = ({ label, color = "primary" }) => {
 
   return (
     <View
-      className={`flex justify-center items-center rounded-md w-[70] h-[20px] ${bgColor}`}
+      className={`flex justify-center items-center rounded-md w-[70] h-[20px]  ${bgColor}`}
     >
       <Text
         className={` text-center text-white ${bgColor}`}

@@ -1,6 +1,7 @@
 import React from "react"
 import { View, SafeAreaView } from "react-native"
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 import Divider from "@components/reusable/Divider"
 
 type Type = React.FC<{
@@ -14,6 +15,7 @@ const Layout: Type = ({ children }) => {
         <Navbar />
         <Divider classNameDivider="mt-4" />
         <View>{children}</View>
+        <Footer />
       </SafeAreaView>
     </View>
   )

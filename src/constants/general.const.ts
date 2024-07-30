@@ -8,11 +8,23 @@ const LANG_OBJECT = {
   EN: "en",
 }
 
+export const CURRENCY_MAP = {
+  IQD: "iqd",
+  USD: "usd",
+}
+
+export const METRIC_MAP = {
+  KM: "km",
+  ML: "mile",
+}
+
 const LANG_LIST = Object.values(LANG_OBJECT)
 
 export const GENERAL_CONSTANTS = {
   STORAGE_LANG,
   LANG_OBJECT,
   LANG_LIST,
-  FIRST_TIME
+  FIRST_TIME,
+  CURRENCY_MAP,
+  METRIC_MAP,
 }
