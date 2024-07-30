@@ -1,8 +1,9 @@
 import React from "react"
 import Text from "@components/reusable/Text"
-import Container from "@src/components/reusable/Container"
 import Layout from "@src/components/layout/Layout"
-import ImageSlider from "@components/reusable/ImageSilder"
+import ImageSlider from "@components/reusable/ImageSlider"
+import ExplorerCar from "@src/components/car/ExplorerCar"
+import Divider from "@src/components/reusable/Divider"
 
 const images = [
   "https://www.carscoops.com/wp-content/uploads/2022/04/Ford-Taurus.jpg",
@@ -17,6 +18,8 @@ const Home: React.FC = () => {
   return (
     <Layout>
       <ImageSlider images={images} />
+      <Divider classNameDivider="my-4" showTooltip={false} />
+      <ExplorerCar />
     </Layout>
   )
 }

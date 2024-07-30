@@ -23,13 +23,7 @@ export const FilterIcon = (props: any) => {
 
 export const SearchIcon = (props: any) => {
   return (
-    <Svg
-      width={16}
-      height={16}
-      viewBox="0 0 16 16"
-      fill="none"
-      {...props}
-    >
+    <Svg width={16} height={16} viewBox="0 0 16 16" fill="none" {...props}>
       <Path
         d="M14.75 14.75l-3.86-3.904M6.875 12.5c-2.25 0-5.625-1.688-5.625-5.625 0-3.938 3.375-5.625 5.625-5.625S12.5 2.938 12.5 6.875c0 3.938-3.375 5.625-5.625 5.625z"
         stroke="#9CA3AF"
