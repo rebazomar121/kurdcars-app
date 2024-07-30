@@ -48,7 +48,14 @@ const Navigation = () => {
 
   if (!fontsLoaded) return <></>
 
-  if (isFirstTime) return <ChooseLang />
+  if (isFirstTime)
+    return (
+      <ChooseLang
+        onEnd={() => {
+          setIsFirstTime(false)
+        }}
+      />
+    )
 
   if (!isConnected) return <NetworkLost />
 

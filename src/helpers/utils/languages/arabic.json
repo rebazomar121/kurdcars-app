@@ -3,6 +3,9 @@
         "general": {
             "networkLost":"فقد الاتصال بالشبكة",
             "chooseLanguage":"اختر اللغة"
+        },
+        "navbar":{
+            "search":"بحث"
         }
     }
 }

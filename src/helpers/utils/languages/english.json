@@ -3,6 +3,9 @@
         "general": {
             "networkLost":"Network connection lost",
             "chooseLanguage":"Choose Language"
+        },
+        "navbar":{
+            "search":"Search"
         }
     }
 }

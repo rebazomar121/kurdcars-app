@@ -41,8 +41,14 @@ const langChanger = async (language: string) => {
   } catch (error: any) {}
 }
 
+let langs = {
+  en: "en",
+  ar: "ar",
+  ku: "ku",
+}
+
 const getCurrentLang = () => {
   return i18n.language
 }
 
-export { i18n, langChanger, getCurrentLang }
+export { i18n, langChanger, getCurrentLang, langs }

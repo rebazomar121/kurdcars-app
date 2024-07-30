@@ -9,7 +9,7 @@ export default {
     splash: {
       image: "./assets/logo.png",
       resizeMode: "contain",
-      backgroundColor: "#ffffff",
+      backgroundColor: "#736fae",
     },
     assetBundlePatterns: ["**/*"],
     ios: {
@@ -18,7 +18,7 @@ export default {
     android: {
       adaptiveIcon: {
         foregroundImage: "./assets/logo.png",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#736fae",
       },
     },
     web: {

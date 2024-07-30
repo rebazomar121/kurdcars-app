@@ -3,6 +3,9 @@
         "general": {
             "networkLost":"پەیوەست بوون بە ئینتەرنێتەوە نیە",
             "chooseLanguage":"زمان هەڵبژێرە"
+        },
+        "navbar":{
+            "search":"گەڕان"
         }
     }
 }
