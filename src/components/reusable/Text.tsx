@@ -7,6 +7,7 @@ type Props = {
   style?: any
   fontFamily?: any
 }
+// boldK24
 
 const CustomText: React.FC<Props> = ({
   children,
@@ -15,7 +16,7 @@ const CustomText: React.FC<Props> = ({
   fontFamily = "regularK24",
 }) => {
   let styles = {
-    fontFamily: fontFamily,
+    fontFamily: fontFamily === "bold" ? "boldK24" : "regularK24",
   }
 
   return (

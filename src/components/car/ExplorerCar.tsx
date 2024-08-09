@@ -6,6 +6,7 @@ type Type = React.FC<{}>
 
 let carsList = [
   {
+    title: "Ford Taurus",
     img: "https://www.carscoops.com/wp-content/uploads/2022/04/Ford-Taurus.jpg",
     brandImg:
       "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png",
@@ -18,8 +19,10 @@ let carsList = [
     currency: "usd",
     metricAge: "13000",
     metricType: "km",
+    location: "Erbil",
   },
   {
+    title: "Ford Explorer",
     img: "https://media.ed.edmunds-media.com/ford/explorer/2023/oem/2023_ford_explorer_4dr-suv_king-ranch_fq_oem_1_1600.jpg",
     brandImg:
       "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png",
@@ -32,8 +35,10 @@ let carsList = [
     currency: "iqd",
     metricAge: "3000",
     metricType: "mile",
+    location: "Erbil",
   },
   {
+    title: "Dodge Charger",
     img: "https://hips.hearstapps.com/hmg-prod/images/2020-dodge-charger-mmp-1-1567712643.jpg",
     brandImg:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dodge_logo_2010.png/1200px-Dodge_logo_2010.png",
@@ -46,11 +51,13 @@ let carsList = [
     currency: "usd",
     metricAge: "3000",
     metricType: "mile",
+    location: "Erbil",
   },
   {
+    title: "Mercedes CLS",
     img: "https://cdn.jdpower.com/Average%20Weight%20Of%20A%20Car.jpg",
     brandImg:
-      "https://seeklogo.com/images/M/Mercedes-Benz-logo-BD677D0B15-seeklogo.com.png",
+      "https://seeklogo.com/images/M/Mercedes-Benz-logo-BD677D0B15-seeklogo.com.png3",
     labels: ["Ford", "Ford", "New"],
     brand: "Mercedes",
     model: "CLS",
@@ -60,8 +67,10 @@ let carsList = [
     currency: "usd",
     metricAge: "32000",
     metricType: "km",
+    location: "Erbil",
   },
   {
+    title: "Ford Taurus",
     img: "https://hips.hearstapps.com/hmg-prod/images/2020-dodge-charger-mmp-1-1567712643.jpg",
     brandImg:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dodge_logo_2010.png/1200px-Dodge_logo_2010.png",
@@ -74,8 +83,10 @@ let carsList = [
     currency: "usd",
     metricAge: "3000",
     metricType: "mile",
+    location: "Erbil",
   },
   {
+    title: "Ford Taurus",
     img: "https://hips.hearstapps.com/hmg-prod/images/2020-dodge-charger-mmp-1-1567712643.jpg",
     brandImg:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dodge_logo_2010.png/1200px-Dodge_logo_2010.png",
@@ -88,8 +99,10 @@ let carsList = [
     currency: "usd",
     metricAge: "3000",
     metricType: "mile",
+    location: "Erbil",
   },
   {
+    title: "Ford Taurus",
     img: "https://hips.hearstapps.com/hmg-prod/images/2020-dodge-charger-mmp-1-1567712643.jpg",
     brandImg:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dodge_logo_2010.png/1200px-Dodge_logo_2010.png",
@@ -102,6 +115,7 @@ let carsList = [
     currency: "usd",
     metricAge: "3000",
     metricType: "mile",
+    location: "Erbil",
   },
 ]
 
@@ -112,6 +126,8 @@ const ExplorerCar: Type = () => {
         return (
           <CarSmallComponent
             key={index}
+            title={car.title}
+            location={car.location}
             img={car.img}
             brandImg={car.brandImg}
             labels={car.labels}

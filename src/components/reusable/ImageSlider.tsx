@@ -6,14 +6,15 @@ import {
   SafeAreaView,
   ScrollView,
   Dimensions,
-  Text,
 } from "react-native"
+import Text from "@components/reusable/Text"
+import { priceStringWithCurrencySymbol } from "@helpers/func"
 
 type Type = React.FC<{
-  images: string[]
+  items: any[]
 }>
 
-const ImageSlider: Type = ({ images }) => {
+const ImageSlider: Type = ({ items }) => {
   const { width } = Dimensions.get("window")
   const height = width * 0.7
 
@@ -24,7 +25,7 @@ const ImageSlider: Type = ({ images }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prevActive) => {
-        const nextActive = prevActive === images.length - 1 ? 0 : prevActive + 1
+        const nextActive = prevActive === items.length - 1 ? 0 : prevActive + 1
         scrollViewRef.current?.scrollTo({
           x: width * nextActive,
           animated: true,
@@ -34,7 +35,7 @@ const ImageSlider: Type = ({ images }) => {
     }, 5000)
 
     return () => clearInterval(interval)
-  }, [images.length, width])
+  }, [items.length, width])
 
   const onScrollChange = ({ nativeEvent }: any) => {
     const slide = Math.ceil(
@@ -48,7 +49,9 @@ const ImageSlider: Type = ({ images }) => {
   return (
     <View className="">
       <View className="absolute z-20 left-8 p-2 rounded-b-md bg-primary ">
-        <Text className="text-white">VIP</Text>
+        <Text className="text-white text-lg" fontFamily={"bold"}>
+          VIP
+        </Text>
       </View>
       <ScrollView
         ref={scrollViewRef}
@@ -58,17 +61,29 @@ const ImageSlider: Type = ({ images }) => {
         showsHorizontalScrollIndicator={false}
         style={{ width, height }}
       >
-        {images.map((image, index) => (
-          <Image
-            key={index}
-            source={{ uri: image }}
-            style={{ width, height, resizeMode: "cover" }}
-          />
+        {items.map((item, index) => (
+          <View>
+            <Image
+              key={index}
+              source={{ uri: item?.img }}
+              style={{ width, height, resizeMode: "cover" }}
+            />
+            <View className="absolute z-20 bottom-4 right-4 p-2 bg-primary text-white rounded-md">
+              <Text className="text-lg" fontFamily="bold">
+                {priceStringWithCurrencySymbol(item?.price, item?.currency)}
+              </Text>
+            </View>
+          </View>
         ))}
       </ScrollView>
       <View style={styles.pagination}>
-        {images.map((_, k) => (
-          <Text key={k} style={k == active ? styles.activeDot : styles.dot}>
+        {items.map((_, k) => (
+          <Text
+            key={k}
+            style={k == active ? styles.activeDot : styles.dot}
+            className=""
+            fontFamily={"bold"}
+          >
             •
           </Text>
         ))}
