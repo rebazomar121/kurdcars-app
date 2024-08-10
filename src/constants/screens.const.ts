@@ -2,10 +2,11 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack"
 import { RouteProp } from "@react-navigation/native"
 
 import Home from "@screens/Home"
+import CarDetails from "@screens/cars/CarDetails"
 
 const screenOptions = {
   headerShown: false,
-  animation: "none",
+  animation: "slide_from_right",
 }
 
 export type ParamListBase = {
@@ -25,6 +26,9 @@ const createScreen = <T>(name: string, component: React.ComponentType<T>) => ({
   options: screenOptions,
 })
 
-const screens = [createScreen("Home", Home)]
+const screens = [
+  createScreen("Home", Home),
+  createScreen("CarDetails", CarDetails),
+]
 
 export { screens }

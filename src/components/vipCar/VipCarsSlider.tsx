@@ -6,17 +6,20 @@ import {
   SafeAreaView,
   ScrollView,
   Dimensions,
+  TouchableOpacity,
 } from "react-native"
 import Text from "@components/reusable/Text"
 import { priceStringWithCurrencySymbol } from "@helpers/func"
+import { useNavigation } from "@react-navigation/native"
 
 type Type = React.FC<{
   items: any[]
 }>
 
-const ImageSlider: Type = ({ items }) => {
+const VipCarsSlider: Type = ({ items }) => {
   const { width } = Dimensions.get("window")
   const height = width * 0.7
+  const navigation: any = useNavigation()
 
   const [active, setActive] = useState(0)
   const scrollViewRef = useRef<ScrollView>(null)
@@ -62,7 +65,14 @@ const ImageSlider: Type = ({ items }) => {
         style={{ width, height }}
       >
         {items.map((item, index) => (
-          <View>
+          <TouchableOpacity
+            onPress={() => {
+              console.log("item", item)
+              navigation.navigate("CarDetails", {
+                item,
+              })
+            }}
+          >
             <Image
               key={index}
               source={{ uri: item?.img }}
@@ -73,7 +83,7 @@ const ImageSlider: Type = ({ items }) => {
                 {priceStringWithCurrencySymbol(item?.price, item?.currency)}
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
       <View style={styles.pagination}>
@@ -109,4 +119,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ImageSlider
+export default VipCarsSlider

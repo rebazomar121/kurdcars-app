@@ -5,6 +5,7 @@ import Text from "../reusable/Text"
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
 import { priceStringWithCurrencySymbol, metricCalculator } from "@helpers/func"
 import Entypo from "@expo/vector-icons/Entypo"
+import { useNavigation } from "@react-navigation/native"
 
 type Type = React.FC<{
   title: string
@@ -37,8 +38,13 @@ const CarSmallComponent: Type = ({
   metricAge,
   metricType,
 }) => {
+  const navigation: any = useNavigation()
+
   return (
-    <TouchableOpacity className="flex border border-gray-300 flex-row rounded-md w-full h-[130px] bg-gray-100 mb-4">
+    <TouchableOpacity
+      onPress={() => navigation.navigate("CarDetails")}
+      className="flex border border-gray-300 flex-row rounded-md w-full h-[130px] bg-gray-100 mb-4"
+    >
       <Image
         source={{
           uri: img,

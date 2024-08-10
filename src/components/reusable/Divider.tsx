@@ -4,13 +4,16 @@ import { View } from "react-native"
 type Type = React.FC<{
   classNameDivider?: string
   showTooltip?: boolean
+  height?: string
 }>
 
-const Divider: Type = ({ classNameDivider, showTooltip = true }) => {
+const Divider: Type = ({
+  classNameDivider = "bg-gray-400",
+  showTooltip = true,
+  height = "h-[1px]",
+}) => {
   return (
-    <View
-      className={`${classNameDivider} ${showTooltip && "h-[1px]"}  bg-gray-400`}
-    ></View>
+    <View className={`${classNameDivider} ${showTooltip && height} `}></View>
   )
 }
 

@@ -1,10 +1,13 @@
 import React, { ReactNode } from "react"
-import { View } from "react-native"
+import { View, SafeAreaView } from "react-native"
+import CarHeader from "../car/CarHeader"
 
 const Container: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <View className="flex-1 justify-center items-center bg-primary">
-      {children}
+    <View className="flex-1 justify-center items-center ">
+      <SafeAreaView className="h-full">
+        <View>{children}</View>
+      </SafeAreaView>
     </View>
   )
 }
