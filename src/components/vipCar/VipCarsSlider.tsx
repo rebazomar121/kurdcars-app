@@ -78,8 +78,8 @@ const VipCarsSlider: Type = ({ items }) => {
               source={{ uri: item?.img }}
               style={{ width, height, resizeMode: "cover" }}
             />
-            <View className="absolute z-20 bottom-4 right-4 p-2 bg-primary text-white rounded-md">
-              <Text className="text-lg" fontFamily="bold">
+            <View className="absolute z-20 bottom-4 right-4 p-2 bg-primary rounded-md">
+              <Text className="text-lg text-white" fontFamily="bold">
                 {priceStringWithCurrencySymbol(item?.price, item?.currency)}
               </Text>
             </View>

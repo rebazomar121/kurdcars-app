@@ -1,21 +1,23 @@
-import React from "react"
-import Layout from "@src/components/layout/Layout"
-import ScrollRefresh from "@components/reusable/ScrollRefetch"
-import Text from "@src/components/reusable/Text"
-import Container from "@src/components/reusable/Container"
-import CarImageSlider from "@src/components/car/CarImageSlider"
-import { images, carFutureList } from "@helpers/fakeData"
-import { useNavigation } from "@react-navigation/native"
-import { View, TouchableOpacity, Image } from "react-native"
-import Entypo from "@expo/vector-icons/Entypo"
+import React from "react";
+import Layout from "@src/components/layout/Layout";
+import ScrollRefresh from "@components/reusable/ScrollRefetch";
+import Text from "@src/components/reusable/Text";
+import Container from "@src/components/reusable/Container";
+import CarImageSlider from "@src/components/car/CarImageSlider";
+import { images, carFutureList } from "@helpers/fakeData";
+import { useNavigation } from "@react-navigation/native";
+import { View, TouchableOpacity, Image } from "react-native";
+import Entypo from "@expo/vector-icons/Entypo";
 
 type Type = React.FC<{
-  name: string
-  img: string
-  location?: string
-}>
+  name: string;
+  img: string;
+  location?: string;
+}>;
 
 const SellerProfileLink: Type = ({ name, img, location }) => {
+  const navigation: any = useNavigation();
+
   return (
     <View className="p-4 ">
       <Text className="text-lg" fontFamily={"bold"}>
@@ -40,14 +42,19 @@ const SellerProfileLink: Type = ({ name, img, location }) => {
             </View>
           )}
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("SellerProfile");
+          }}
+          className="flex flex-row items-center"
+        >
           <Text className="text-primary mt-4" fontFamily={"bold"}>
             View Profile
           </Text>
         </TouchableOpacity>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default SellerProfileLink
+export default SellerProfileLink;

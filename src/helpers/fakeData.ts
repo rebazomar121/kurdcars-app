@@ -1,3 +1,8 @@
+export const generalImages = {
+  carSellerShop: "https://static.overfuel.com/dealers/indy-auto-man/image/car-lot-1024x361.jpg",
+  sellerProfile: "https://www.shutterstock.com/image-photo/beautiful-man-standing-smiling-three-600nw-2263100009.jpg"
+}
+
 export const images = [
   "https://www.carscoops.com/wp-content/uploads/2022/04/Ford-Taurus.jpg",
   "https://i.redd.it/2023-ford-taurus-only-available-in-the-middle-east-v0-ks8qufrczsbb1.jpg?width=3648&format=pjpg&auto=webp&s=53079c5fc2571191b5340a9ea19cbfcbd72be821",
@@ -258,3 +263,5 @@ export const carFutureList = [
     value: "Leather",
   },
 ]
+
+

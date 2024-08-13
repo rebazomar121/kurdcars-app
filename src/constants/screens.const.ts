@@ -3,6 +3,7 @@ import { RouteProp } from "@react-navigation/native"
 
 import Home from "@screens/Home"
 import CarDetails from "@screens/cars/CarDetails"
+import SellerProfile from "@screens/profile/SellerProfile"
 
 const screenOptions = {
   headerShown: false,
@@ -29,6 +30,7 @@ const createScreen = <T>(name: string, component: React.ComponentType<T>) => ({
 const screens = [
   createScreen("Home", Home),
   createScreen("CarDetails", CarDetails),
+  createScreen("SellerProfile", SellerProfile),
 ]
 
 export { screens }

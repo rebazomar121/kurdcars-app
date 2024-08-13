@@ -1,7 +1,7 @@
-import { screens } from "@constants/screens.const"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { screens } from "@constants/screens.const";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 const authScreens = () => {
   return (
@@ -14,10 +14,10 @@ const authScreens = () => {
             component={screen?.component}
             options={screen?.options}
           />
-        )
+        );
       })}
     </Stack.Navigator>
-  )
-}
+  );
+};
 
-export default authScreens
+export default authScreens;

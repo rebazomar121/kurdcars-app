@@ -10,7 +10,7 @@ type Type = React.FC<{
 const CarFuture: Type = ({ title, value }) => {
   return (
     <View className="px-2">
-      <View className="flex flex-row  items-center p-4 border-b border-gray-400">
+      <View className="flex flex-row  items-center p-1 border-b border-gray-400">
         <View className="w-1/2">
           <Text className="text-lg text-gray-500" fontFamily={"bold"}>
             {title}
