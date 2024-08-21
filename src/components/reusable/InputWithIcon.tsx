@@ -1,18 +1,18 @@
-import React from "react"
-import { View, TextInput } from "react-native"
-import { useTranslation } from "react-i18next"
+import React from "react";
+import { View, TextInput } from "react-native";
+import { useTranslation } from "react-i18next";
 
 type Type = React.FC<{
-  Icon?: React.ReactNode
-  onChange: (e: any) => void
-  placeholder?: string
-}>
+  Icon?: React.ReactNode;
+  onChange: (e: any) => void;
+  placeholder?: string;
+}>;
 
 const ButtonWithIcon: Type = ({ Icon, onChange }) => {
-  const { t: translate } = useTranslation()
+  const { t: translate } = useTranslation();
 
   return (
-    <View className="flex flex-row justify-between items-center rounded-md  bg-white w-[70%]">
+    <View className="flex flex-row justify-between items-center rounded-md  bg-white w-[55%]">
       <TextInput
         onChangeText={onChange}
         className="w-[100%] p-2 border-gray-400 rounded-md  border"
@@ -23,7 +23,7 @@ const ButtonWithIcon: Type = ({ Icon, onChange }) => {
         {Icon}
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default ButtonWithIcon
+export default ButtonWithIcon;

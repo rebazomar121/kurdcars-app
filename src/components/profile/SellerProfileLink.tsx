@@ -38,7 +38,7 @@ const SellerProfileLink: Type = ({ name, img, location }) => {
               <Text className="text-lg " fontFamily={"bold"}>
                 {location}
               </Text>
-              <Entypo name="location-pin" size={24} color="#736fae" />
+              <Entypo name="location-pin" size={24} color="#573CDA" />
             </View>
           )}
         </View>

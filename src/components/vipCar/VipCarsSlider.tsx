@@ -51,7 +51,7 @@ const VipCarsSlider: Type = ({ items }) => {
 
   return (
     <View className="">
-      <View className="absolute z-20 left-8 p-2 rounded-b-md bg-primary ">
+      <View className="absolute z-20 left-8 p-2 rounded-b-md bg-primary">
         <Text className="text-white text-lg" fontFamily={"bold"}>
           VIP
         </Text>

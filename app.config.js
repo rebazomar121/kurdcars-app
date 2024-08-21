@@ -28,4 +28,4 @@ export default {
       SENTRY_DNS: "your-sentry-dns",
     },
   },
-}
+};

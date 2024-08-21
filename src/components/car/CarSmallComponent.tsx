@@ -1,27 +1,27 @@
-import React from "react"
-import { View, Image, TouchableOpacity } from "react-native"
-import FlatLabel from "../reusable/FlatLabel"
-import Text from "../reusable/Text"
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
-import { priceStringWithCurrencySymbol, metricCalculator } from "@helpers/func"
-import Entypo from "@expo/vector-icons/Entypo"
-import { useNavigation } from "@react-navigation/native"
+import React from "react";
+import { View, Image, TouchableOpacity } from "react-native";
+import FlatLabel from "../reusable/FlatLabel";
+import Text from "../reusable/Text";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { priceStringWithCurrencySymbol, metricCalculator } from "@helpers/func";
+import Entypo from "@expo/vector-icons/Entypo";
+import { useNavigation } from "@react-navigation/native";
 
 type Type = React.FC<{
-  title: string
-  location: string
-  img: string
-  brandImg: string
-  labels: string[]
-  brand: string
-  model: string
-  year: string
-  isNew: boolean
-  price: string
-  currency: string
-  metricAge: string
-  metricType: string
-}>
+  title: string;
+  location: string;
+  img: string;
+  brandImg: string;
+  labels: string[];
+  brand: string;
+  model: string;
+  year: string;
+  isNew: boolean;
+  price: string;
+  currency: string;
+  metricAge: string;
+  metricType: string;
+}>;
 
 const CarSmallComponent: Type = ({
   title,
@@ -38,7 +38,7 @@ const CarSmallComponent: Type = ({
   metricAge,
   metricType,
 }) => {
-  const navigation: any = useNavigation()
+  const navigation: any = useNavigation();
 
   return (
     <TouchableOpacity
@@ -77,7 +77,7 @@ const CarSmallComponent: Type = ({
 
         <View className="h-[30px] bg-green mt-2 flex flex-row justify-between">
           <View className="flex flex-row  justify-between items-center mr-2">
-            <Entypo name="location-pin" size={14} color="#736fae" />
+            <Entypo name="location-pin" size={14} color="#573CDA" />
             {/* TODO cites must be localize */}
             <Text className="text-sm  text-gray-800 ">{location}</Text>
           </View>
@@ -87,7 +87,7 @@ const CarSmallComponent: Type = ({
         </View>
       </View>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default CarSmallComponent
+export default CarSmallComponent;

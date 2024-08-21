@@ -1,7 +1,9 @@
 export const generalImages = {
-  carSellerShop: "https://static.overfuel.com/dealers/indy-auto-man/image/car-lot-1024x361.jpg",
-  sellerProfile: "https://www.shutterstock.com/image-photo/beautiful-man-standing-smiling-three-600nw-2263100009.jpg"
-}
+  carSellerShop:
+    "https://static.overfuel.com/dealers/indy-auto-man/image/car-lot-1024x361.jpg",
+  sellerProfile:
+    "https://www.shutterstock.com/image-photo/beautiful-man-standing-smiling-three-600nw-2263100009.jpg",
+};
 
 export const images = [
   "https://www.carscoops.com/wp-content/uploads/2022/04/Ford-Taurus.jpg",
@@ -10,7 +12,7 @@ export const images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmPxZeA2zM5CuW-l25hXvwxSLQpg0JF6HIUQ&s",
   "https://hips.hearstapps.com/hmg-prod/images/2020-dodge-charger-mmp-1-1567712643.jpg",
   "https://i.ibb.co/B3Jwqt3/coming-Soon.png",
-]
+];
 
 export const vipCars = [
   {
@@ -83,7 +85,7 @@ export const vipCars = [
     metricAge: "3000",
     metricType: "mile",
   },
-]
+];
 
 export const carsList = [
   {
@@ -198,7 +200,7 @@ export const carsList = [
     metricType: "mile",
     location: "Erbil",
   },
-]
+];
 
 export const imagesListForImageView = [
   {
@@ -219,11 +221,11 @@ export const imagesListForImageView = [
   {
     uri: "https://i.ibb.co/B3Jwqt3/coming-Soon.png",
   },
-]
+];
 
 export const carFutureList = [
   {
-    title: "Created By",
+    title: "Brand",
     value: "Ford",
   },
   {
@@ -262,6 +264,4 @@ export const carFutureList = [
     title: "Sets Material",
     value: "Leather",
   },
-]
-
-
+];

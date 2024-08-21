@@ -49,13 +49,13 @@ const CarDetails: React.FC = () => {
         <View>
           <View className="flex flex-row  justify-between items-center p-4">
             <View className="flex flex-row">
-              <Entypo name="location-pin" size={24} color="#736fae" />
+              <Entypo name="location-pin" size={24} color="#573CDA" />
               {/* TODO cites must be localize */}
               <Text className="text-lg  text-gray-800 ">Erbil</Text>
             </View>
 
             <View className="flex flex-row">
-              <MaterialIcons name="date-range" size={24} color="#736fae" />
+              <MaterialIcons name="date-range" size={24} color="#573CDA" />
               <Text className="text-lg  text-gray-800 "> 8 Hours</Text>
             </View>
           </View>
@@ -68,18 +68,18 @@ const CarDetails: React.FC = () => {
 
         <View>
           <View className="flex flex-row items-center p-4">
-            <View className="flex flex-row w-1/2  justify-center">
+            <View className="flex flex-col w-1/2  justify-center self-center items-center">
               <MaterialCommunityIcons
                 name="engine-outline"
                 size={30}
-                color="#736fae"
+                color="#573CDA"
               />
               <Text className="text-xl mx-2 text-primary" fontFamily={"bold"}>
                 2.0 L
               </Text>
             </View>
-            <View className="flex flex-row w-1/2  justify-center">
-              <MaterialCommunityIcons name="piston" size={24} color="#736fae" />
+            <View className="flex flex-col w-1/2  justify-center self-center items-center">
+              <MaterialCommunityIcons name="piston" size={24} color="#573CDA" />
               <Text className="text-xl mx-2 text-primary" fontFamily={"bold"}>
                 4 Cylinders
               </Text>
@@ -87,18 +87,18 @@ const CarDetails: React.FC = () => {
           </View>
 
           <View className="flex flex-row items-center p-4">
-            <View className="flex flex-row w-1/2  justify-center">
+            <View className="flex flex-col w-1/2  justify-center self-center items-center">
               <MaterialCommunityIcons
                 name="car-shift-pattern"
                 size={26}
-                color="#736fae"
+                color="#573CDA"
               />
               <Text className="text-xl mx-2 text-primary" fontFamily={"bold"}>
                 Automatic
               </Text>
             </View>
-            <View className="flex flex-row w-1/2  justify-center">
-              <MaterialCommunityIcons name="fuel" size={26} color="#736fae" />
+            <View className="flex flex-col w-1/2  justify-center self-center items-center">
+              <MaterialCommunityIcons name="fuel" size={26} color="#573CDA" />
               <Text className="text-xl mx-2 text-primary" fontFamily={"bold"}>
                 Fuel
               </Text>
@@ -106,14 +106,14 @@ const CarDetails: React.FC = () => {
           </View>
 
           <View className="flex flex-row items-center p-4">
-            <View className="flex flex-row w-1/2  justify-center">
-              <Ionicons name="speedometer-outline" size={26} color="#736fae" />
+            <View className="flex flex-col w-1/2  justify-center self-center items-center">
+              <Ionicons name="speedometer-outline" size={26} color="#573CDA" />
               <Text className="text-xl mx-2 text-primary" fontFamily={"bold"}>
                 7,000 KM
               </Text>
             </View>
-            <View className="flex flex-row w-1/2  justify-center">
-              <Ionicons name="earth" size={26} color="#736fae" />
+            <View className="flex flex-col w-1/2  justify-center self-center items-center">
+              <Ionicons name="earth" size={26} color="#573CDA" />
               <Text className="text-xl mx-2 text-primary" fontFamily={"bold"}>
                 U.S.A
               </Text>
@@ -131,6 +131,15 @@ const CarDetails: React.FC = () => {
           {carFutureList.map((item, index) => (
             <CarFuture key={index} title={item.title} value={item.value} />
           ))}
+        </View>
+
+        <View className="flex flex-row justify-between items-center p-4 bg-white">
+          <Text className="text-xl text-black">
+            Note: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Incidunt accusamus exercitationem dicta provident, ipsa magnam quo
+            ad quidem, blanditiis, reprehenderit odio officiis. Error
+            reprehenderit architecto doloribus tempore quod nemo ratione.
+          </Text>
         </View>
 
         <SellerProfileLink

@@ -113,7 +113,7 @@ const SellerProfile: React.FC = () => {
               <Text className="text-lg " fontFamily={"bold"}>
                 Erbil
               </Text>
-              <Entypo name="location-pin" size={24} color="#736fae" />
+              <Entypo name="location-pin" size={24} color="#573CDA" />
               <Text className="text-lg " fontFamily={"bold"}>
                 | 0750 123 4567
               </Text>

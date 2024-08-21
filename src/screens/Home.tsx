@@ -1,10 +1,10 @@
-import React from "react"
-import Layout from "@src/components/layout/Layout"
-import VipCarsSlider from "@components/vipCar/VipCarsSlider"
-import ExplorerCar from "@src/components/car/ExplorerCar"
-import Divider from "@src/components/reusable/Divider"
-import ScrollRefresh from "@components/reusable/ScrollRefetch"
-import { images, vipCars } from "@helpers/fakeData"
+import React from "react";
+import Layout from "@src/components/layout/Layout";
+import VipCarsSlider from "@components/vipCar/VipCarsSlider";
+import ExplorerCar from "@src/components/car/ExplorerCar";
+import Divider from "@src/components/reusable/Divider";
+import ScrollRefresh from "@components/reusable/ScrollRefetch";
+import { images, vipCars } from "@helpers/fakeData";
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         <ExplorerCar />
       </ScrollRefresh>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
