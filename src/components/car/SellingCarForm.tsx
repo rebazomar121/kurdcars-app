@@ -1,33 +1,46 @@
 import React, { useState } from "react";
-import Layout from "@src/components/layout/Layout";
-import ScrollRefresh from "@components/reusable/ScrollRefetch";
-import Text from "@src/components/reusable/Text";
-import Container from "@src/components/reusable/Container";
-import CarImageSlider from "@src/components/car/CarImageSlider";
-import { images, carFutureList } from "@helpers/fakeData";
 import { useNavigation } from "@react-navigation/native";
-import { View, TouchableOpacity } from "react-native";
-import Divider from "@src/components/reusable/Divider";
-import Entypo from "@expo/vector-icons/Entypo";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { EnginePiston } from "@helpers/utils/Icons";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import Footer from "@src/components/layout/Footer";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import Fontisto from "@expo/vector-icons/Fontisto";
-import SellerProfileLink from "@src/components/profile/SellerProfileLink";
-import CarFuture from "@src/components/reusable/CarFuture";
-import ExplorerCar from "@src/components/car/ExplorerCar";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import Feather from "@expo/vector-icons/Feather";
+import { View } from "react-native";
+import { cites } from "../../helpers/fakeData";
+import { SelectList } from "react-native-dropdown-select-list";
+import ImageUploader from "../reusable/ImageUploader";
 
-const SellingCarForm: React.FC = () => {
+type Type = React.FC<{
+  inputData: any;
+  setInputData: any;
+}>;
+
+const SellingCarForm: Type = ({ inputData, setInputData }) => {
   const navigation = useNavigation();
-  const [inputData,setInputData]=useState<any>()
 
   return (
-    <View></View>
+    <View className="p-4">
+      <SelectList
+        dropdownStyles={{
+          width: "100%",
+        }}
+        dropdownTextStyles={{
+          textAlign: "left",
+        }}
+        placeholder={"Cites"}
+        boxStyles={{
+          width: "100%",
+        }}
+        fontFamily="rabar"
+        setSelected={(val: any) => {
+          setInputData({ ...inputData, city: val });
+        }}
+        defaultOption={{
+          key: cites[0].key,
+          value: cites[0].value,
+        }}
+        data={cites}
+        save="key"
+        search={true}
+      />
+
+      <ImageUploader classNameContainer="mt-4" />
+    </View>
   );
 };
 

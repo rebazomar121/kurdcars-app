@@ -265,3 +265,41 @@ export const carFutureList = [
     value: "Leather",
   },
 ];
+
+export const cites = [
+  {
+    label: "Erbil",
+    key: "erbil",
+    value: "erbil",
+  },
+  {
+    label: "Sulaymaniyah",
+    key: "sulaymaniyah",
+    value: "sulaymaniyah",
+  },
+  {
+    label: "Duhok",
+    key: "duhok",
+    value: "duhok",
+  },
+  {
+    label: "Kirkuk",
+    key: "kirkuk",
+    value: "kirkuk",
+  },
+  {
+    label: "Baghdad",
+    key: "baghdad",
+    value: "baghdad",
+  },
+  {
+    label: "Basra",
+    key: "basra",
+    value: "basra",
+  },
+  {
+    label: "Mosul",
+    key: "mosul",
+    value: "mosul",
+  },
+];

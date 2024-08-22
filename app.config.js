@@ -6,11 +6,11 @@ export default {
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",
-    splash: {
-      image: "./assets/logo.png",
-      resizeMode: "contain",
-      backgroundColor: "#736fae",
-    },
+    // splash: {
+    //   image: "./assets/logo.png",
+    //   resizeMode: "contain",
+    //   backgroundColor: "#736fae",
+    // },
     assetBundlePatterns: ["**/*"],
     ios: {
       supportsTablet: true,
