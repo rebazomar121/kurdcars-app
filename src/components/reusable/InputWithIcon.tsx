@@ -8,7 +8,7 @@ type Type = React.FC<{
   placeholder?: string;
 }>;
 
-const ButtonWithIcon: Type = ({ Icon, onChange }) => {
+const InputWithIcon: Type = ({ Icon, onChange }) => {
   const { t: translate } = useTranslation();
 
   return (
@@ -26,4 +26,4 @@ const ButtonWithIcon: Type = ({ Icon, onChange }) => {
   );
 };
 
-export default ButtonWithIcon;
+export default InputWithIcon;

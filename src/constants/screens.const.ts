@@ -5,6 +5,7 @@ import Home from "@screens/Home";
 import CarDetails from "@screens/cars/CarDetails";
 import SellerProfile from "@screens/profile/SellerProfile";
 import CarSell from "@src/screens/cars/CarSell";
+import Login from "@screens/auth/Login";
 
 const screenOptions = {
   headerShown: false,
@@ -33,6 +34,7 @@ const screens = [
   createScreen("CarDetails", CarDetails),
   createScreen("SellerProfile", SellerProfile),
   createScreen("CarSell", CarSell),
+  createScreen("Login", Login),
 ];
 
 export { screens };
