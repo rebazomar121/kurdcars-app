@@ -1,33 +1,32 @@
-import React, { ReactNode, useEffect, useRef } from "react"
-import { View, Modal, TouchableOpacity, Animated } from "react-native"
-import Text from "./Text"
-import { AntDesign } from "@expo/vector-icons"
+import React, { ReactNode, useEffect, useRef } from "react";
+import { View, Modal, TouchableOpacity, Animated } from "react-native";
+import Text from "./Text";
+import { AntDesign } from "@expo/vector-icons";
 import {
   responsiveScreenWidth as wp,
   responsiveScreenHeight as hp,
-} from "react-native-responsive-dimensions"
+} from "react-native-responsive-dimensions";
 
 type Type = React.FC<{
-  showModal: boolean
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
-  children: ReactNode
-  bgColor?: string
-  bgOpacity?: string
-  modalSize?: "small" | "medium" | "large" | "full"
-  costumeSize?: number
-  title?: string
-  subTitle?: string
-  cancelable?: boolean
-  animationType?: "none" | "slide" | "fade" | undefined
-  duration?: number
-  headClassName?: string
-  childrenClassName?: string
-}>
+  showModal: boolean;
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  children: ReactNode;
+  bgColor?: string;
+  bgOpacity?: string;
+  modalSize?: "small" | "medium" | "large" | "full";
+  costumeSize?: number;
+  title?: string;
+  subTitle?: string;
+  cancelable?: boolean;
+  animationType?: "none" | "slide" | "fade" | undefined;
+  duration?: number;
+  headClassName?: string;
+  childrenClassName?: string;
+}>;
 const ModalComponents: Type = ({
   showModal,
   setShowModal,
   children,
-  //   bgColor = customColor.appleBackGround,
   bgOpacity = "0.2",
   modalSize = "medium",
   title,
@@ -39,24 +38,24 @@ const ModalComponents: Type = ({
   headClassName = "mt-2",
   childrenClassName = "p-4",
 }) => {
-  const handleClose = () => setShowModal(false)
-  const slideInAnimation = useRef(new Animated.Value(hp(100))).current
+  const handleClose = () => setShowModal(false);
+  const slideInAnimation = useRef(new Animated.Value(hp(100))).current;
   useEffect(() => {
     return Animated.timing(slideInAnimation, {
       toValue: 0,
       duration,
       useNativeDriver: true,
-    }).start()
-  }, [showModal])
+    }).start();
+  }, [showModal]);
   const handleModalClose = () => {
     Animated.timing(slideInAnimation, {
       toValue: hp(100),
       duration,
       useNativeDriver: true,
     }).start(() => {
-      handleClose()
-    })
-  }
+      handleClose();
+    });
+  };
   return (
     <Modal
       animationType={animationType}
@@ -115,6 +114,6 @@ const ModalComponents: Type = ({
         {/* bg modal */}
       </View>
     </Modal>
-  )
-}
-export default ModalComponents
+  );
+};
+export default ModalComponents;

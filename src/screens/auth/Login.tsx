@@ -4,9 +4,10 @@ import Text from "@src/components/reusable/Text";
 import Container from "@src/components/reusable/Container";
 import { useNavigation } from "@react-navigation/native";
 import { View, TouchableOpacity } from "react-native";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import PhoneNumberInput from "@src/components/reusable/PhoneNumberInput";
 import OtpInput from "@src/components/reusable/OtpInput";
+import PrimaryCartWithText from "@src/components/layout/PrimaryCartWithText";
+import BackNavbar from "@src/components/layout/BackNavbar";
 
 const Login: React.FC = () => {
   const navigation = useNavigation();
@@ -52,27 +53,8 @@ const Login: React.FC = () => {
   return (
     <Container classNameContainer="none">
       <ScrollRefresh marginBottom={0} height="100%">
-        {/* navbar */}
-        <View className="z-20 top-2 left-2 flex  flex-row ">
-          <TouchableOpacity
-            onPress={() => {
-              navigation.goBack();
-            }}
-            className="p-2 rounded-b-md bg-white rounded-full"
-          >
-            <AntDesign name="arrowleft" size={24} color="black" />
-          </TouchableOpacity>
-          <Text className="flex text-2xl  self-center mx-2" fontFamily="bold">
-            Login
-          </Text>
-        </View>
-        <View className="p-4">
-          <View className="w-full bg-primary mt-4 rounded-md p-2">
-            <Text fontFamily={"bold"} className="text-white text-2xl">
-              Login And Sell Your Car Now
-            </Text>
-          </View>
-        </View>
+        <BackNavbar title="Login" />
+        <PrimaryCartWithText title="Login And Sell Your Car Now" />
         {step === 1 && (
           <>
             <PhoneNumberInput

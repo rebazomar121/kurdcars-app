@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import Reacts from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
@@ -20,6 +20,7 @@ import {
   plateCountryList,
   plateCityList,
   carStatusList,
+  toyotaCarModels,
 } from "../../helpers/fakeData";
 import ImageUploader from "../reusable/ImageUploader";
 import Input from "@src/components/reusable/Input";
@@ -36,6 +37,7 @@ type Type = React.FC<{
 }>;
 
 const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
+  const navigation: any = useNavigation();
   return (
     <View className="p-4 mb-72">
       <View>
@@ -66,14 +68,6 @@ const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
       </View>
 
       <ImageUploader classNameContainer="my-4" />
-
-      <Input
-        onChange={(e: any) => {
-          setInputData({ ...inputData, name: e });
-        }}
-        placeholder="Car Name"
-        label="Car Name"
-      />
 
       <Switcher
         onChange={(val: any) => {
@@ -184,30 +178,23 @@ const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
       />
 
       <View className="my-4">
-        <Text className="text-xl">Brand</Text>
-        <SelectList
-          dropdownStyles={{
-            width: "100%",
-          }}
-          dropdownTextStyles={{
-            textAlign: "left",
-          }}
-          placeholder={"Brand"}
-          boxStyles={{
-            width: "100%",
-          }}
-          fontFamily="bold"
-          setSelected={(val: any) => {
+        <Switcher
+          onChange={(val: any) => {
             setInputData({ ...inputData, brand: val });
           }}
-          defaultOption={{
-            key: carBrandsList[0].key,
-            value: carBrandsList[0].value,
-          }}
-          data={carBrandsList}
-          save="key"
-          search={true}
+          buttonsList={carBrandsList}
+          label="Brand"
         />
+
+        {inputData?.brand && (
+          <Switcher
+            onChange={(val: any) => {
+              setInputData({ ...inputData, brand: val });
+            }}
+            buttonsList={toyotaCarModels}
+            label="Model"
+          />
+        )}
       </View>
 
       <View className="my-4">
@@ -338,11 +325,10 @@ const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
 
       <Button
         onClick={() => {
-          // TODO this must be show an component to show the preview of the post
-          // onPost(inputData);
+          navigation.navigate("CarDetailsPreview");
         }}
         classNameButton="bg-primary"
-        title="Post Car"
+        title="Preview"
       />
     </View>
   );

@@ -15,7 +15,7 @@ const Navbar: Type = () => {
 
   return (
     <View className="flex  flex-row justify-between items-center p-4">
-      {userData ? (
+      {!userData ? (
         <ButtonWithIcon
           Icon={<MaterialIcons name="sell" size={24} color="#573CDA" />}
           onClick={() => navigation.navigate("CarSell")}

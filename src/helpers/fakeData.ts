@@ -416,274 +416,353 @@ export const regionList = [
 
 export const carBrandsList = [
   {
-    value: "Toyota",
-    key: "toyota",
+    label: "Toyota",
+    value: "toyota",
   },
   {
-    value: "Honda",
-    key: "honda",
+    label: "Honda",
+    value: "honda",
   },
   {
-    value: "Ford",
-    key: "ford",
+    label: "Ford",
+    value: "ford",
   },
   {
-    value: "Chevrolet",
-    key: "chevrolet",
+    label: "Chevrolet",
+    value: "chevrolet",
   },
   {
-    value: "BMW",
-    key: "bmw",
+    label: "BMW",
+    value: "bmw",
   },
   {
-    value: "Mercedes-Benz",
-    key: "mercedes_benz",
+    label: "Mercedes-Benz",
+    value: "mercedes_benz",
   },
   {
-    value: "Volkswagen",
-    key: "volkswagen",
+    label: "Volkswagen",
+    value: "volkswagen",
   },
   {
-    value: "Audi",
-    key: "audi",
+    label: "Audi",
+    value: "audi",
   },
   {
-    value: "Hyundai",
-    key: "hyundai",
+    label: "Hyundai",
+    value: "hyundai",
   },
   {
-    value: "Kia",
-    key: "kia",
+    label: "Kia",
+    value: "kia",
   },
   {
-    value: "Nissan",
-    key: "nissan",
+    label: "Nissan",
+    value: "nissan",
   },
   {
-    value: "Subaru",
-    key: "subaru",
+    label: "Subaru",
+    value: "subaru",
   },
   {
-    value: "Lexus",
-    key: "lexus",
+    label: "Lexus",
+    value: "lexus",
   },
   {
-    value: "Tesla",
-    key: "tesla",
+    label: "Tesla",
+    value: "tesla",
   },
   {
-    value: "Volvo",
-    key: "volvo",
+    label: "Volvo",
+    value: "volvo",
   },
   {
-    value: "Jaguar",
-    key: "jaguar",
+    label: "Jaguar",
+    value: "jaguar",
   },
   {
-    value: "Porsche",
-    key: "porsche",
+    label: "Porsche",
+    value: "porsche",
   },
   {
-    value: "Mazda",
-    key: "mazda",
+    label: "Mazda",
+    value: "mazda",
   },
   {
-    value: "Dodge",
-    key: "dodge",
+    label: "Dodge",
+    value: "dodge",
   },
   {
-    value: "Jeep",
-    key: "jeep",
+    label: "Jeep",
+    value: "jeep",
   },
   // Chinese car brands
   {
-    value: "Geely",
-    key: "geely",
+    label: "Geely",
+    value: "geely",
   },
   {
-    value: "BYD",
-    key: "byd",
+    label: "BYD",
+    value: "byd",
   },
   {
-    value: "NIO",
-    key: "nio",
+    label: "NIO",
+    value: "nio",
   },
   {
-    value: "Great Wall",
-    key: "great_wall",
+    label: "Great Wall",
+    value: "great_wall",
   },
   {
-    value: "Changan",
-    key: "changan",
+    label: "Changan",
+    value: "changan",
   },
   {
-    value: "Chery",
-    key: "chery",
+    label: "Chery",
+    value: "chery",
   },
   {
-    value: "Xpeng",
-    key: "xpeng",
+    label: "Xpeng",
+    value: "xpeng",
   },
   {
-    value: "Hongqi",
-    key: "hongqi",
+    label: "Hongqi",
+    value: "hongqi",
   },
   {
-    value: "SAIC Motor",
-    key: "saic_motor",
+    label: "SAIC Motor",
+    value: "saic_motor",
   },
   {
-    value: "Wuling",
-    key: "wuling",
+    label: "Wuling",
+    value: "wuling",
   },
   {
-    value: "BAIC",
-    key: "baic",
+    label: "BAIC",
+    value: "baic",
   },
   {
-    value: "Lynk & Co",
-    key: "lynk_co",
+    label: "Lynk & Co",
+    value: "lynk_co",
   },
   {
-    value: "Roewe",
-    key: "roewe",
+    label: "Roewe",
+    value: "roewe",
   },
   {
-    value: "Li Auto",
-    key: "li_auto",
+    label: "Li Auto",
+    value: "li_auto",
   },
   {
-    value: "GAC Group",
-    key: "gac_group",
+    label: "GAC Group",
+    value: "gac_group",
   },
   {
-    value: "Haval",
-    key: "haval",
+    label: "Haval",
+    value: "haval",
   },
   {
-    value: "Dongfeng",
-    key: "dongfeng",
+    label: "Dongfeng",
+    value: "dongfeng",
   },
   // Other popular brands
   {
-    value: "Alfa Romeo",
-    key: "alfa_romeo",
+    label: "Alfa Romeo",
+    value: "alfa_romeo",
   },
   {
-    value: "Aston Martin",
-    key: "aston_martin",
+    label: "Aston Martin",
+    value: "aston_martin",
   },
   {
-    value: "Bentley",
-    key: "bentley",
+    label: "Bentley",
+    value: "bentley",
   },
   {
-    value: "Bugatti",
-    key: "bugatti",
+    label: "Bugatti",
+    value: "bugatti",
   },
   {
-    value: "Cadillac",
-    key: "cadillac",
+    label: "Cadillac",
+    value: "cadillac",
   },
   {
-    value: "Ferrari",
-    key: "ferrari",
+    label: "Ferrari",
+    value: "ferrari",
   },
   {
-    value: "Fiat",
-    key: "fiat",
+    label: "Fiat",
+    value: "fiat",
   },
   {
-    value: "GMC",
-    key: "gmc",
+    label: "GMC",
+    value: "gmc",
   },
   {
-    value: "Genesis",
-    key: "genesis",
+    label: "Genesis",
+    value: "genesis",
   },
   {
-    value: "Infiniti",
-    key: "infiniti",
+    label: "Infiniti",
+    value: "infiniti",
   },
   {
-    value: "Land Rover",
-    key: "land_rover",
+    label: "Land Rover",
+    value: "land_rover",
   },
   {
-    value: "Maserati",
-    key: "maserati",
+    label: "Maserati",
+    value: "maserati",
   },
   {
-    value: "McLaren",
-    key: "mclaren",
+    label: "McLaren",
+    value: "mclaren",
   },
   {
-    value: "Mini",
-    key: "mini",
+    label: "Mini",
+    value: "mini",
   },
   {
-    value: "Mitsubishi",
-    key: "mitsubishi",
+    label: "Mitsubishi",
+    value: "mitsubishi",
   },
   {
-    value: "Peugeot",
-    key: "peugeot",
+    label: "Peugeot",
+    value: "peugeot",
   },
   {
-    value: "Renault",
-    key: "renault",
+    label: "Renault",
+    value: "renault",
   },
   {
-    value: "Rolls-Royce",
-    key: "rolls_royce",
+    label: "Rolls-Royce",
+    value: "rolls_royce",
   },
   {
-    value: "Suzuki",
-    key: "suzuki",
+    label: "Suzuki",
+    value: "suzuki",
   },
   {
-    value: "Skoda",
-    key: "skoda",
+    label: "Skoda",
+    value: "skoda",
   },
   {
-    value: "Smart",
-    key: "smart",
+    label: "Smart",
+    value: "smart",
   },
   {
-    value: "Tata",
-    key: "tata",
+    label: "Tata",
+    value: "tata",
   },
   {
-    value: "Citroën",
-    key: "citroen",
+    label: "Citroën",
+    value: "citroen",
   },
   {
-    value: "Pagani",
-    key: "pagani",
+    label: "Pagani",
+    value: "pagani",
   },
   {
-    value: "Koenigsegg",
-    key: "koenigsegg",
+    label: "Koenigsegg",
+    value: "koenigsegg",
   },
   {
-    value: "Lamborghini",
-    key: "lamborghini",
+    label: "Lamborghini",
+    value: "lamborghini",
   },
   {
-    value: "Lotus",
-    key: "lotus",
+    label: "Lotus",
+    value: "lotus",
   },
   {
-    value: "Bentley",
-    key: "bentley",
+    label: "Bentley",
+    value: "bentley",
   },
   {
-    value: "Acura",
-    key: "acura",
+    label: "Acura",
+    value: "acura",
   },
   {
-    value: "Buick",
-    key: "buick",
+    label: "Buick",
+    value: "buick",
+  },
+];
+
+export const toyotaCarModels = [
+  {
+    label: "Camry",
+    value: "camry",
+  },
+  {
+    label: "Corolla",
+    value: "corolla",
+  },
+  {
+    label: "RAV4",
+    value: "rav4",
+  },
+  {
+    label: "Highlander",
+    value: "highlander",
+  },
+  {
+    label: "Tacoma",
+    value: "tacoma",
+  },
+  {
+    label: "Tundra",
+    value: "tundra",
+  },
+  {
+    label: "4Runner",
+    value: "4runner",
+  },
+  {
+    label: "Avalon",
+    value: "avalon",
+  },
+  {
+    label: "Prius",
+    value: "prius",
+  },
+  {
+    label: "Yaris",
+    value: "yaris",
+  },
+  {
+    label: "Sequoia",
+    value: "sequoia",
+  },
+  {
+    label: "Land Cruiser",
+    value: "land_cruiser",
+  },
+  {
+    label: "C-HR",
+    value: "c_hr",
+  },
+  {
+    label: "Supra",
+    value: "supra",
+  },
+  {
+    label: "Venza",
+    value: "venza",
+  },
+  {
+    label: "Sienna",
+    value: "sienna",
+  },
+  {
+    label: "Mirai",
+    value: "mirai",
+  },
+  {
+    label: "GR86",
+    value: "gr86",
+  },
+  {
+    label: "Corolla Cross",
+    value: "corolla_cross",
   },
 ];
 
@@ -712,7 +791,6 @@ export const colorsList = [
   { label: "Gray", value: "#808080" },
   { label: "Red", value: "#FF0000" },
   { label: "Blue", value: "#0000FF" },
-  { label: "Green", value: "#00FF00" },
   { label: "Yellow", value: "#FFFF00" },
   { label: "Orange", value: "#FFA500" },
   { label: "Brown", value: "#A52A2A" },
@@ -742,6 +820,10 @@ export const colorsList = [
 ];
 
 export const paintedParts = [
+  {
+    label: "Clean Title",
+    value: "clean-title",
+  },
   {
     label: "1 Part",
     value: "1part",
@@ -823,6 +905,10 @@ export const plateCountryList = [
   {
     label: "Out Of Iraq",
     value: "out_of_iraq",
+  },
+  {
+    label: "Temporal Plate",
+    value: "temporal-plate",
   },
   {
     label: "Have No Plate",
