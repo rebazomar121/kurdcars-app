@@ -43,16 +43,23 @@ const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
       <View>
         <Text className="text-xl">Cites</Text>
         <SelectList
+          boxStyles={{
+            width: "100%",
+            backgroundColor: "white",
+            borderRadius: 6,
+            borderColor: "#A0A0A0",
+          }}
           dropdownStyles={{
             width: "100%",
+            borderRadius: 6,
+            borderColor: "#A0A0A0",
+            backgroundColor: "white",
           }}
           dropdownTextStyles={{
             textAlign: "left",
+            backgroundColor: "white",
           }}
           placeholder={"Cites"}
-          boxStyles={{
-            width: "100%",
-          }}
           fontFamily="bold"
           setSelected={(val: any) => {
             setInputData({ ...inputData, city: val });
@@ -109,16 +116,23 @@ const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
           <View className="my-4">
             <Text className="text-xl">Engine Size</Text>
             <SelectList
+              boxStyles={{
+                width: "100%",
+                backgroundColor: "white",
+                borderRadius: 6,
+                borderColor: "#A0A0A0",
+              }}
               dropdownStyles={{
                 width: "100%",
+                borderRadius: 6,
+                borderColor: "#A0A0A0",
+                backgroundColor: "white",
               }}
               dropdownTextStyles={{
                 textAlign: "left",
+                backgroundColor: "white",
               }}
               placeholder={"Engine"}
-              boxStyles={{
-                width: "100%",
-              }}
               fontFamily="bold"
               setSelected={(val: any) => {
                 console.log("val", val);
@@ -200,16 +214,23 @@ const SellingCarForm: Type = ({ inputData, setInputData, onPost }) => {
       <View className="my-4">
         <Text className="text-xl">Year</Text>
         <SelectList
+          boxStyles={{
+            width: "100%",
+            backgroundColor: "white",
+            borderRadius: 6,
+            borderColor: "#A0A0A0",
+          }}
           dropdownStyles={{
             width: "100%",
+            borderRadius: 6,
+            borderColor: "#A0A0A0",
+            backgroundColor: "white",
           }}
           dropdownTextStyles={{
             textAlign: "left",
+            backgroundColor: "white",
           }}
           placeholder={"Year"}
-          boxStyles={{
-            width: "100%",
-          }}
           fontFamily="bold"
           setSelected={(val: any) => {
             setInputData({ ...inputData, year: val });

@@ -51,16 +51,23 @@ const CarFilters: Type = ({ showCarFilters, setShowCarFilters }) => {
           <ScrollRefresh marginBottom={0} height="90%">
             <Text className="text-xl">Cites</Text>
             <SelectList
+              boxStyles={{
+                width: "100%",
+                backgroundColor: "white",
+                borderRadius: 6,
+                borderColor: "#A0A0A0",
+              }}
               dropdownStyles={{
                 width: "100%",
+                borderRadius: 6,
+                borderColor: "#A0A0A0",
+                backgroundColor: "white",
               }}
               dropdownTextStyles={{
                 textAlign: "left",
+                backgroundColor: "white",
               }}
               placeholder={"Cites"}
-              boxStyles={{
-                width: "100%",
-              }}
               fontFamily="bold"
               setSelected={(val: any) => {
                 setFilters({ ...filters, city: val });
@@ -119,16 +126,23 @@ const CarFilters: Type = ({ showCarFilters, setShowCarFilters }) => {
                 <View className="my-4">
                   <Text className="text-xl">Engine Size</Text>
                   <SelectList
+                    boxStyles={{
+                      width: "100%",
+                      backgroundColor: "white",
+                      borderRadius: 6,
+                      borderColor: "#A0A0A0",
+                    }}
                     dropdownStyles={{
                       width: "100%",
+                      borderRadius: 6,
+                      borderColor: "#A0A0A0",
+                      backgroundColor: "white",
                     }}
                     dropdownTextStyles={{
                       textAlign: "left",
+                      backgroundColor: "white",
                     }}
                     placeholder={"Engine"}
-                    boxStyles={{
-                      width: "100%",
-                    }}
                     fontFamily="bold"
                     setSelected={(val: any) => {
                       console.log("val", val);
@@ -204,16 +218,23 @@ const CarFilters: Type = ({ showCarFilters, setShowCarFilters }) => {
             <View className="my-4">
               <Text className="text-xl">Year</Text>
               <SelectList
+                boxStyles={{
+                  width: "100%",
+                  backgroundColor: "white",
+                  borderRadius: 6,
+                  borderColor: "#A0A0A0",
+                }}
                 dropdownStyles={{
                   width: "100%",
+                  borderRadius: 6,
+                  borderColor: "#A0A0A0",
+                  backgroundColor: "white",
                 }}
                 dropdownTextStyles={{
                   textAlign: "left",
+                  backgroundColor: "white",
                 }}
                 placeholder={"Year"}
-                boxStyles={{
-                  width: "100%",
-                }}
                 fontFamily="bold"
                 setSelected={(val: any) => {
                   setFilters({ ...filters, year: val });
@@ -257,7 +278,7 @@ const CarFilters: Type = ({ showCarFilters, setShowCarFilters }) => {
 
             <Button
               onClick={() => {
-                navigation.navigate("Home")
+                navigation.navigate("Home");
                 setShowCarFilters(!showCarFilters);
               }}
               classNameButton="bg-primary"

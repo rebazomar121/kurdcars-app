@@ -8,6 +8,9 @@ import PhoneNumberInput from "@src/components/reusable/PhoneNumberInput";
 import OtpInput from "@src/components/reusable/OtpInput";
 import PrimaryCartWithText from "@src/components/layout/PrimaryCartWithText";
 import BackNavbar from "@src/components/layout/BackNavbar";
+import Input from "@src/components/reusable/Input";
+import { SelectList } from "react-native-dropdown-select-list";
+import { cites } from "@helpers/fakeData";
 
 const Login: React.FC = () => {
   const navigation = useNavigation();
@@ -55,6 +58,56 @@ const Login: React.FC = () => {
       <ScrollRefresh marginBottom={0} height="100%">
         <BackNavbar title="Login" />
         <PrimaryCartWithText title="Login And Sell Your Car Now" />
+
+        <Text className="text-center text-lg m-4">
+          If You Don't Have Account Just Enter Your Name And Verify At Then Your
+          Account Will Be Created
+        </Text>
+
+        <View className="flex flex-col px-4 justify-center ">
+          <Input
+            onChange={(e: any) => {
+              setInputData({ ...inputData, price: e });
+            }}
+            placeholder="Name"
+            label="Name"
+            type="default"
+          />
+          <View>
+            <Text className="text-xl">Cites</Text>
+            <SelectList
+              boxStyles={{
+                width: "100%",
+                backgroundColor: "white",
+                borderRadius: 6,
+                borderColor: "#A0A0A0",
+              }}
+              dropdownStyles={{
+                width: "100%",
+                borderRadius: 6,
+                borderColor: "#A0A0A0",
+                backgroundColor: "white",
+              }}
+              dropdownTextStyles={{
+                textAlign: "left",
+                backgroundColor: "white",
+              }}
+              placeholder={"Cites"}
+              fontFamily="bold"
+              setSelected={(val: any) => {
+                setInputData({ ...inputData, city: val });
+              }}
+              defaultOption={{
+                key: cites[0].key,
+                value: cites[0].value,
+              }}
+              data={cites}
+              save="key"
+              search={true}
+            />
+          </View>
+        </View>
+
         {step === 1 && (
           <>
             <PhoneNumberInput
