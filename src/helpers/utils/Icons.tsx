@@ -76,9 +76,9 @@ export const HomeIcon = (color?: any) => {
   );
 };
 
-export const SellIcon = ({ color = "#B9B9B9" }) => {
+export const SellIcon = ({ color = "#B9B9B9", size = 25 }) => {
   return (
-    <Svg width={25} height={25} viewBox="0 0 25 25" fill="none">
+    <Svg width={size} height={size} viewBox="0 0 25 25" fill="none">
       <Path
         d="M6.863 4.992a1.872 1.872 0 100 3.743 1.872 1.872 0 000-3.743zm16.997 5.877L13.365.362A1.248 1.248 0 0012.479 0H1.248A1.248 1.248 0 000 1.248v11.23a1.247 1.247 0 00.362.887L10.869 23.86a3.744 3.744 0 005.291 0l7.7-7.637a3.744 3.744 0 000-5.291v-.063zm-1.76 3.52l-7.712 7.699a1.248 1.248 0 01-1.76 0L2.497 11.968V2.495h9.471L22.1 12.629a1.249 1.249 0 010 1.76z"
         fill={color}

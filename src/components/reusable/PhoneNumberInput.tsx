@@ -6,9 +6,14 @@ import Text from "./Text";
 type Type = React.FC<{
   onChangePhoneNumber: (phoneNumber: string) => void;
   defaultValue?: string;
+  title?: string;
 }>;
 
-const PhoneNumberInput: Type = ({ onChangePhoneNumber, defaultValue }) => {
+const PhoneNumberInput: Type = ({
+  onChangePhoneNumber,
+  defaultValue,
+  title = "Phone number",
+}) => {
   const [phoneNumber, setPhoneNumber] = useState(
     defaultValue ? defaultValue : ""
   );
@@ -24,7 +29,7 @@ const PhoneNumberInput: Type = ({ onChangePhoneNumber, defaultValue }) => {
   return (
     <View className="w-full p-4">
       <Text className="text-xl" fontFamily={"bold"}>
-        Phone number
+        {title}
       </Text>
 
       <PhoneInput

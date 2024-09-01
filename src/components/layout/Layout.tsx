@@ -6,13 +6,14 @@ import Divider from "@components/reusable/Divider";
 
 type Type = React.FC<{
   children: React.ReactNode;
+  showHeader?: boolean;
 }>;
 
-const Layout: Type = ({ children }) => {
+const Layout: Type = ({ children, showHeader = true }) => {
   return (
     <View className="bg-white h-full">
       <SafeAreaView className="">
-        <Navbar />
+        {showHeader ? <Navbar /> : <></>}
         <View>{children}</View>
         <Footer />
       </SafeAreaView>

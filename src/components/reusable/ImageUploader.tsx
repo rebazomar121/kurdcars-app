@@ -14,9 +14,13 @@ import ImageView from "react-native-image-viewing";
 
 type Type = React.FC<{
   classNameContainer?: string;
+  allowsMultipleSelection?: boolean;
 }>;
 
-const ImageUploader: Type = ({ classNameContainer }) => {
+const ImageUploader: Type = ({
+  classNameContainer,
+  allowsMultipleSelection = true,
+}) => {
   const [images, setImages] = useState<any[]>([]);
   const [primaryIndex, setPrimaryIndex] = useState<number>(0);
   const [showImage, setShowImage] = useState<{
@@ -47,11 +51,14 @@ const ImageUploader: Type = ({ classNameContainer }) => {
       aspect: [4, 3],
       quality: 1,
       exif: false,
-      allowsMultipleSelection: true,
+      allowsMultipleSelection,
       selectionLimit: 9,
       legacy: false,
       orderedSelection: true,
     });
+
+    console.log(result?.assets);
+    if (!result?.assets || result?.assets?.length <= 0) return;
 
     if (!result.cancelled) {
       setImages(result?.assets);
@@ -63,7 +70,6 @@ const ImageUploader: Type = ({ classNameContainer }) => {
     updatedImages.splice(index, 1);
     setImages(updatedImages);
   };
-
 
   return (
     <View className={`space-y-4 ${classNameContainer}`}>

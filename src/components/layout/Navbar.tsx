@@ -2,7 +2,12 @@ import React, { useState, useContext } from "react";
 import { View } from "react-native";
 import ButtonWithIcon from "@components/reusable/ButtonWithIcon";
 import InputWithIcon from "@components/reusable/InputWithIcon";
-import { FilterIcon, SearchIcon, LocationIcon } from "@helpers/utils/Icons";
+import {
+  FilterIcon,
+  SearchIcon,
+  LocationIcon,
+  SellIcon,
+} from "@helpers/utils/Icons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
 import { useUserContext } from "@context/context";
@@ -19,7 +24,7 @@ const Navbar: Type = () => {
     <View className="flex  flex-row justify-between items-center p-4">
       {!userData ? (
         <ButtonWithIcon
-          Icon={<MaterialIcons name="sell" size={24} color="#573CDA" />}
+          Icon={<SellIcon size={20} color="#573CDA" />}
           onClick={() => navigation.navigate("CarSell")}
           classNameButton="bg-white w-24 border-gray-400 border"
           title="Sell"

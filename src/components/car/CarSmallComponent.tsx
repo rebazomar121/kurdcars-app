@@ -39,6 +39,7 @@ const CarSmallComponent: Type = ({
   metricType,
 }) => {
   const navigation: any = useNavigation();
+  
 
   return (
     <TouchableOpacity

@@ -1,12 +1,12 @@
-import React from "react"
-import { View } from "react-native"
-import CarSmallComponent from "./CarSmallComponent"
-import { carsList } from "@helpers/fakeData"
+import React from "react";
+import { View } from "react-native";
+import CarSmallComponent from "./CarSmallComponent";
+import { carsList } from "@helpers/fakeData";
 
-type Type = React.FC<{}>
+type Type = React.FC<{}>;
 const ExplorerCar: Type = () => {
   return (
-    <View className="mx-4 h-full mb-16">
+    <View className="mx-4 mb-16">
       {carsList.map((car, index) => {
         return (
           <CarSmallComponent
@@ -25,10 +25,10 @@ const ExplorerCar: Type = () => {
             metricAge={car.metricAge}
             metricType={car.metricType}
           />
-        )
+        );
       })}
     </View>
-  )
-}
+  );
+};
 
-export default ExplorerCar
+export default ExplorerCar;

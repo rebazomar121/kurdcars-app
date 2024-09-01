@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Layout from "@src/components/layout/Layout";
 import ScrollRefresh from "@components/reusable/ScrollRefetch";
 import Text from "@src/components/reusable/Text";
 import Container from "@src/components/reusable/Container";
-import CarImageSlider from "@src/components/car/CarImageSlider";
-import { images, carFutureList, generalImages } from "@helpers/fakeData";
+import { generalImages } from "@helpers/fakeData";
 import { useNavigation } from "@react-navigation/native";
 import {
   View,
@@ -13,17 +11,8 @@ import {
   Dimensions,
   Pressable,
 } from "react-native";
-import Divider from "@src/components/reusable/Divider";
 import Entypo from "@expo/vector-icons/Entypo";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { EnginePiston } from "@helpers/utils/Icons";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import Footer from "@src/components/layout/Footer";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import Fontisto from "@expo/vector-icons/Fontisto";
-import SellerProfileLink from "@src/components/profile/SellerProfileLink";
-import CarFuture from "@src/components/reusable/CarFuture";
 import ExplorerCar from "@src/components/car/ExplorerCar";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import ImageView from "react-native-image-viewing";
@@ -74,12 +63,7 @@ const SellerProfile: React.FC = () => {
 
         {/* profile */}
 
-        <View
-          className="z-30  left-2 flex flex-row items-center p-2 bg-white rounded-full shadow-md transform -translate-y-6"
-          style={{
-            width: profileSize,
-          }}
-        >
+        <View className="mb-4  flex flex-row items-center p-2 px-4 bg-white ">
           <Pressable
             onPress={() => {
               setCurrentImage({
@@ -122,7 +106,7 @@ const SellerProfile: React.FC = () => {
         </View>
 
         {/* About */}
-        <View className="px-4 rounded-md bg-white mx-2 ">
+        <View className="px-4 rounded-md bg-white mx-4 ">
           <Text className="text-2xl text-black" fontFamily={"bold"}>
             About
           </Text>

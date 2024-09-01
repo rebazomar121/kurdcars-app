@@ -973,3 +973,100 @@ export const carStatusList = [
     value: "not_working",
   },
 ];
+
+export const companyCarShop = [
+  {
+    name: "Erbil Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnsCeUvz0bCEDJ6kidEEPNa8EUeKnjRhD30g&s",
+    location: "Erbil",
+  },
+  {
+    name: "Sulaymaniyah Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cNR0aSl-mxOfFghhGSnkxAyclEgnTiAUZQ&s",
+    location: "Sulaymaniyah",
+  },
+  {
+    name: "Duhok Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeBYJkpcT3NpqXxLjN70-dfmfCq1CAVzcGSQ&s",
+    location: "Duhok",
+  },
+  {
+    name: "Kirkuk Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYrNDoksOHdFiX1kYhN7NNROCAAlBq76sWyg&s",
+    location: "Kirkuk",
+  },
+  {
+    name: "Erbil Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnsCeUvz0bCEDJ6kidEEPNa8EUeKnjRhD30g&s",
+    location: "Erbil",
+  },
+  {
+    name: "Sulaymaniyah Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cNR0aSl-mxOfFghhGSnkxAyclEgnTiAUZQ&s",
+    location: "Sulaymaniyah",
+  },
+  {
+    name: "Duhok Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeBYJkpcT3NpqXxLjN70-dfmfCq1CAVzcGSQ&s",
+    location: "Duhok",
+  },
+  {
+    name: "Kirkuk Car Shop",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYrNDoksOHdFiX1kYhN7NNROCAAlBq76sWyg&s",
+    location: "Kirkuk",
+  },
+];
+
+export const newestCarCarts = [
+  {
+    name: "Toyota corolla",
+    img: "https://www.pngplay.com/wp-content/uploads/15/Camry-Toyota-PNG-Photos.webp",
+  },
+  {
+    name: "Toyota corolla",
+    img: "https://static.vecteezy.com/system/resources/previews/048/594/468/non_2x/modern-car-isolated-on-background-3d-rendering-illustration-png.png",
+  },
+  {
+    name: "Bmw Car",
+    img: "https://i.pinimg.com/originals/e2/86/11/e286116013bb23582db360dd12d593e3.png",
+  },
+  {
+    name: "Bmw Car 2",
+    img: "https://clipart-library.com/image_gallery2/BMW-PNG-Image.png",
+  },
+  {
+    name: "Car",
+    img: "https://cdn.pixabay.com/photo/2015/10/01/17/17/car-967387_1280.png",
+  },
+  {
+    name: "Toyota Camry 2024",
+    img: "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/camry/xle/2560/795/36/5.png?fmt=png-alpha&wid=930&qlt=90",
+  },
+  {
+    name: "Toyota Camry 2021",
+    img: "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/camry/xle/2560/795/36/5.png?fmt=png-alpha&wid=930&qlt=90",
+  },
+];
+
+export const typeOfCars = [
+  {
+    name: "Muscle",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbGTZTfYDQSxBKBIkb9_wxUeQNar5J87S6-g&s",
+  },
+  {
+    name: "Truck",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTYYn28nmoTrxqbEq0wcfDFcT6fCFz6NoD0Q&s",
+  },
+  {
+    name: "Sport",
+    img: "https://www.popsci.com/wp-content/uploads/2021/06/15/lambo.jpeg",
+  },
+  {
+    name: "SUV",
+    img: "https://www.usnews.com/object/image/0000018d-3c53-d18f-ab9d-fcf7ea870001/2024-cadillac-escalade-v-series-010.jpg?update-time=1706114148921&size=responsive640",
+  },
+  {
+    name: "Mini",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGzoVk3lmQTQwYcT2YjqLrTzuFUG-q5KLiPA&s",
+  },
+];

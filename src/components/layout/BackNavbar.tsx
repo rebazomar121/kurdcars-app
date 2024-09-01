@@ -17,7 +17,7 @@ const BackNavbar: Type = ({ title }) => {
         onPress={() => {
           navigation.goBack();
         }}
-        className="p-2 rounded-b-md bg-white rounded-full"
+        className="p-2 mx-2 rounded-b-md bg-white rounded-full"
       >
         <AntDesign name="arrowleft" size={24} color="black" />
       </TouchableOpacity>

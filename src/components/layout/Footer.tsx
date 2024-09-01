@@ -34,8 +34,8 @@ const Footer: Type = () => {
   }, [navigation]);
 
   return (
-    <View className="flex  absolute bottom-0 w-full h-[16%]  flex-row justify-center items-center">
-      <View className="rounded-md border-2  bg-gray-100 border-gray-200 w-[90%] mb-4 h-16 flex flex-row justify-around items-center">
+    <View className="flex  absolute bottom-0 w-full h-[12%]  flex-row justify-center items-center">
+      <View className="rounded-md bg-white  w-[100%] mb-4 h-16 flex flex-row justify-around items-center">
         <TouchableOpacity
           className=" w-14 h-14 flex justify-center items-center"
           onPress={() => handleChangeScreen("Home")}
@@ -55,19 +55,19 @@ const Footer: Type = () => {
           />
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => setActiveScreen("bookmarked")}
+          onPress={() => handleChangeScreen("FavoriteCar")}
           className=" w-14 h-14 flex justify-center items-center"
         >
           <BookmarkIcon
-            color={activeScreen === "bookmarked" ? "#573CDA" : "#B9B9B9"}
+            color={activeScreen === "FavoriteCar" ? "#573CDA" : "#B9B9B9"}
           />
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => setActiveScreen("person")}
+          onPress={() => handleChangeScreen("Profile")}
           className=" w-14 h-14 flex justify-center items-center"
         >
           <PersonIcon
-            color={activeScreen === "person" ? "#573CDA" : "#B9B9B9"}
+            color={activeScreen === "Profile" ? "#573CDA" : "#B9B9B9"}
           />
         </TouchableOpacity>
       </View>
