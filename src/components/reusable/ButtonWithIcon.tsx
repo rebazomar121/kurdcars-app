@@ -3,6 +3,7 @@ import { View, TouchableOpacity } from "react-native";
 import Text from "@components/reusable/Text";
 import { getClassNames } from "@helpers/func";
 
+
 type Type = React.FC<{
   Icon: React.ReactNode;
   onClick: () => void;

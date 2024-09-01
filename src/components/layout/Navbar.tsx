@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { View } from "react-native";
 import ButtonWithIcon from "@components/reusable/ButtonWithIcon";
 import InputWithIcon from "@components/reusable/InputWithIcon";
@@ -6,12 +6,14 @@ import { FilterIcon, SearchIcon, LocationIcon } from "@helpers/utils/Icons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
 import { useUserContext } from "@context/context";
+import CarFilters from "../car/CarFilters";
 
 type Type = React.FC<{}>;
 
 const Navbar: Type = () => {
   const navigation: any = useNavigation();
   const { userData }: any = useUserContext();
+  const [showCarFilters, setShowCarFilters] = useState<boolean>(false);
 
   return (
     <View className="flex  flex-row justify-between items-center p-4">
@@ -37,8 +39,14 @@ const Navbar: Type = () => {
       />
       <ButtonWithIcon
         Icon={<FilterIcon />}
-        onClick={() => console.log("Filter Clicked")}
+        onClick={() => {
+          setShowCarFilters(!showCarFilters);
+        }}
         classNameButton="bg-primary"
+      />
+      <CarFilters
+        showCarFilters={showCarFilters}
+        setShowCarFilters={setShowCarFilters}
       />
     </View>
   );

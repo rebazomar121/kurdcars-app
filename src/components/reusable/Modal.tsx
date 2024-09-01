@@ -6,6 +6,7 @@ import {
   responsiveScreenWidth as wp,
   responsiveScreenHeight as hp,
 } from "react-native-responsive-dimensions";
+import { getClassNames } from "@helpers/func";
 
 type Type = React.FC<{
   showModal: boolean;
@@ -22,6 +23,7 @@ type Type = React.FC<{
   duration?: number;
   headClassName?: string;
   childrenClassName?: string;
+  cancelButtonClassName?: string;
 }>;
 const ModalComponents: Type = ({
   showModal,
@@ -37,9 +39,11 @@ const ModalComponents: Type = ({
   duration = 300,
   headClassName = "mt-2",
   childrenClassName = "p-4",
+  cancelButtonClassName,
 }) => {
   const handleClose = () => setShowModal(false);
   const slideInAnimation = useRef(new Animated.Value(hp(100))).current;
+
   useEffect(() => {
     return Animated.timing(slideInAnimation, {
       toValue: 0,
@@ -56,6 +60,7 @@ const ModalComponents: Type = ({
       handleClose();
     });
   };
+
   return (
     <Modal
       animationType={animationType}
@@ -88,30 +93,29 @@ const ModalComponents: Type = ({
                 ? 100
                 : 50
             ),
-            // backgroundColor: bgColor,
           }}
           className={`${modalSize !== "full" ? "rounded-t-2xl" : ""} `}
         >
-          {/* modal head */}
-          <View className={`p-3  flex-row justify-between ${headClassName}`}>
+          <View className={`p-3 ${headClassName}`}>
             <View>
-              {title && <Text className="mx-2 text-lg">{title}</Text>}
-              {subTitle && <Text className="mx-2">{subTitle}</Text>}
+              {title && <Text className="mx-2 text-xl">{title}</Text>}
+              {subTitle && <Text className="mx-2 text-lg">{subTitle}</Text>}
             </View>
+
             {cancelable && (
-              <TouchableOpacity onPress={handleModalClose}>
-                <AntDesign
-                  name="close"
-                  size={25}
-                  //   color={customColor.textColor}
-                />
+              <TouchableOpacity
+                onPress={handleModalClose}
+                className={getClassNames(
+                  "absolute top-4 right-4",
+                  cancelButtonClassName
+                )}
+              >
+                <AntDesign name="close" size={25} />
               </TouchableOpacity>
             )}
+            <View className={childrenClassName}>{children}</View>
           </View>
-          {/* modal body */}
-          <View className={childrenClassName}>{children}</View>
         </Animated.View>
-        {/* bg modal */}
       </View>
     </Modal>
   );

@@ -10,9 +10,16 @@ type Type = React.FC<{
     label: string;
     value: any;
   }>;
+  inactiveClassName?: string;
 }>;
 
-const Switcher: Type = ({ onChange, buttonsList, label, defaultSelected }) => {
+const Switcher: Type = ({
+  onChange,
+  buttonsList,
+  label,
+  defaultSelected,
+  inactiveClassName = "bg-white",
+}) => {
   const [selected, setSelected] = useState<any>(defaultSelected);
   const [showMore, setShowMore] = useState<boolean>(false);
   return (
@@ -29,7 +36,7 @@ const Switcher: Type = ({ onChange, buttonsList, label, defaultSelected }) => {
               }}
               key={index}
               className={`p-2 rounded-md ${index === 0 ? "" : ""} ${
-                selected === button.value ? "bg-primary" : "bg-white"
+                selected === button.value ? "bg-primary" : inactiveClassName
               }`}
             >
               <Text

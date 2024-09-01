@@ -7,6 +7,7 @@ import SellerProfile from "@screens/profile/SellerProfile";
 import CarSell from "@src/screens/cars/CarSell";
 import Login from "@screens/auth/Login";
 import CarDetailsPreview from "@screens/cars/CarDetailsPreview";
+import OfferPage from "@src/screens/offer/OfferPage";
 
 const screenOptions = {
   headerShown: false,
@@ -24,10 +25,14 @@ export type ScreenRouteProp<ScreenName extends keyof ParamListBase> = RouteProp<
 
 export type NavigationStackList = NativeStackNavigationProp<ParamListBase>;
 
-const createScreen = <T>(name: string, component: React.ComponentType<T>) => ({
+const createScreen = <T>(
+  name: string,
+  component: React.ComponentType<T>,
+  options?: any
+) => ({
   name,
   component,
-  options: screenOptions,
+  options: options ? options : screenOptions,
 });
 
 const screens = [
@@ -37,6 +42,10 @@ const screens = [
   createScreen("CarSell", CarSell),
   createScreen("Login", Login),
   createScreen("CarDetailsPreview", CarDetailsPreview),
+  createScreen("OfferPage", OfferPage, {
+    headerShown: false,
+    animation: "none",
+  }),
 ];
 
 export { screens };
