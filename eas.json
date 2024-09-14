@@ -1,18 +1,38 @@
 {
-  "cli": {
-    "version": ">= 9.1.0"
-  },
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "node": "18.13.0",
+      "env": {
+        "ANDROID_SDK_ROOT": "/Users/rebazomar/Library/Android/sdk"
+      },
+      "channel": "development"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "ANDROID_SDK_ROOT": "/Users/rebazomar/Library/Android/sdk"
+      },
+      "channel": "preview"
     },
-    "production": {}
-  },
-  "submit": {
-    "production": {}
+    "production": {
+      "env": {
+        "ANDROID_SDK_ROOT": "/Users/rebazomar/Library/Android/sdk",
+        "ANDROID_NDK_HOME":"/Users/rebazomar/Library/Android/sdk/ndk"
+      },
+      "channel": "production"
+    },
+    "production-ios": {
+      "ios": {
+        "image": "latest"
+      },
+      "distribution": "store",
+      "node": "18.13.0",
+      "releaseChannel": "release"
+    }
   }
 }

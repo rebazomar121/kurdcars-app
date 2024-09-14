@@ -1,28 +1,28 @@
-import React from "react"
-import { View, Image, TouchableOpacity } from "react-native"
-import Container from "@src/components/reusable/Container"
-import Text from "@components/reusable/Text"
-import { useTranslation } from "react-i18next"
-import { GENERAL_CONSTANTS } from "@src/constants/general.const"
-import AsyncStorage from "@react-native-async-storage/async-storage"
-import { langChanger, langs } from "@helpers/utils/lang"
+import React from "react";
+import { View, Image, TouchableOpacity } from "react-native";
+import Container from "@src/components/reusable/Container";
+import Text from "@components/reusable/Text";
+import { useTranslation } from "react-i18next";
+import { GENERAL_CONSTANTS } from "@src/constants/general.const";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { langChanger, langs } from "@helpers/utils/lang";
 
 type Type = React.FC<{
-  onEnd: () => void
-}>
+  onEnd: () => void;
+}>;
 
 const ChooseLang: Type = ({ onEnd }) => {
-  const { t: translate } = useTranslation()
+  const { t: translate } = useTranslation();
 
   const handleSelectLang = (lang: string) => {
-    AsyncStorage.setItem(GENERAL_CONSTANTS.STORAGE_LANG, lang)
-    AsyncStorage.setItem(GENERAL_CONSTANTS.FIRST_TIME, "false")
-    langChanger(lang)
-    onEnd()
-  }
+    AsyncStorage.setItem(GENERAL_CONSTANTS.STORAGE_LANG, lang);
+    AsyncStorage.setItem(GENERAL_CONSTANTS.FIRST_TIME, "false");
+    langChanger(lang);
+    onEnd();
+  };
 
   return (
-    <Container>
+    <View className="flex-1 justify-center items-center bg-white">
       <Text className="text-center my-6 text-3xl" fontFamily="boldK24">
         {translate("general.chooseLanguage")}
       </Text>
@@ -51,10 +51,13 @@ const ChooseLang: Type = ({ onEnd }) => {
       </View>
 
       <View className="absolute bottom-10">
-        <Image source={require("@assets/logo.png")} className="w-20 h-20" />
+        <Image
+          source={require("@assets/logo.png")}
+          className="w-20 h-20 rounded-full"
+        />
       </View>
-    </Container>
-  )
-}
+    </View>
+  );
+};
 
-export default ChooseLang
+export default ChooseLang;

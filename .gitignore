@@ -35,3 +35,9 @@ yarn-error.*
 *.tsbuildinfo
 package-lock.json
 yarn.lock
+
+
+build-*
+.env.local
+android
+.idea

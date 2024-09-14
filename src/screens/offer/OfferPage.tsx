@@ -32,6 +32,7 @@ const OfferPage: React.FC = () => {
                 name={item.name}
                 img={item.img}
                 location={item.location}
+                key={index}
               />
             ))}
           </HorizontalScrollView>
@@ -45,7 +46,7 @@ const OfferPage: React.FC = () => {
         </View>
         <HorizontalScrollView>
           {newestCarCarts?.map((item, index) => (
-            <NewCarCart name={item.name} img={item.img} />
+            <NewCarCart name={item.name} img={item.img} key={index} />
           ))}
         </HorizontalScrollView>
         <Divider classNameDivider="bg-gray-200 my-4" height="h-[1px]" />
@@ -58,7 +59,7 @@ const OfferPage: React.FC = () => {
 
           <HorizontalScrollView>
             {typeOfCars?.map((item, index) => (
-              <TypeCarCart name={item.name} img={item.img} />
+              <TypeCarCart name={item.name} img={item.img} key={index} />
             ))}
           </HorizontalScrollView>
         </View>

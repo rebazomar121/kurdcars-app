@@ -29,6 +29,27 @@ const ScrollRefresh: Type = ({
     setLoading(false);
   }, []);
 
+  if (isRefetch)
+    return (
+      <ScrollView
+        contentContainerStyle={contentContainerStyle}
+        className={contentContainerClassName}
+        style={{
+          marginBottom: marginBottom,
+          height: height,
+        }}
+        showsVerticalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={loading}
+            onRefresh={onRefreshToShowLoaderAction}
+          />
+        }
+      >
+        {children}
+      </ScrollView>
+    );
+
   return (
     <ScrollView
       contentContainerStyle={contentContainerStyle}
@@ -38,13 +59,6 @@ const ScrollRefresh: Type = ({
         height: height,
       }}
       showsVerticalScrollIndicator={false}
-      refreshControl={() => {
-        if (isRefetch)
-          <RefreshControl
-            refreshing={loading}
-            onRefresh={onRefreshToShowLoaderAction}
-          />;
-      }}
     >
       {children}
     </ScrollView>

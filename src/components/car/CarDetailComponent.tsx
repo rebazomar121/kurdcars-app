@@ -124,7 +124,7 @@ const CarDetailComponent: Type = ({ images, onClickBack, carFutureList }) => {
       />
 
       <View>
-        {carFutureList.map((item, index) => (
+        {carFutureList?.map((item, index) => (
           <CarFuture key={index} title={item.title} value={item.value} />
         ))}
       </View>

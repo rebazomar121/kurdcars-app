@@ -72,6 +72,7 @@ const VipCarsSlider: Type = ({ items }) => {
                 item,
               })
             }}
+            key={index}
           >
             <Image
               key={index}

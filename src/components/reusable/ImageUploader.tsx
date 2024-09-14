@@ -104,6 +104,7 @@ const ImageUploader: Type = ({
                   width: "46%",
                 }}
                 className="border rounded-md my-2"
+                key={index}
               >
                 <Pressable
                   key={index}

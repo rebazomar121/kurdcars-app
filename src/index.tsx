@@ -1,10 +1,10 @@
-import React from "react"
-import "tailwindcss-react-native/types.d"
-import { SafeAreaProvider } from "react-native-safe-area-context"
-import { i18n } from "@helpers/utils/lang"
-import { I18nextProvider } from "react-i18next"
-import Provider from "@context/context"
-import Navigation from "@navigation/navigation"
+import React from "react";
+import "tailwindcss-react-native/types.d";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { i18n } from "@helpers/utils/lang";
+import { I18nextProvider } from "react-i18next";
+import Provider from "@context/context";
+import Navigation from "@navigation/navigation";
 
 export default function App() {
   return (
@@ -15,5 +15,5 @@ export default function App() {
         </Provider>
       </I18nextProvider>
     </SafeAreaProvider>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react";
 import {
   View,
   Image,
@@ -6,52 +6,53 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
-} from "react-native"
-import Text from "@components/reusable/Text"
-import Feather from "@expo/vector-icons/Feather"
-import AntDesign from "@expo/vector-icons/AntDesign"
-import Entypo from "@expo/vector-icons/Entypo"
-import ImageView from "react-native-image-viewing"
-import { imagesListForImageView } from "@helpers/fakeData"
+} from "react-native";
+import Text from "@components/reusable/Text";
+import Feather from "@expo/vector-icons/Feather";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
+import ImageView from "react-native-image-viewing";
+import { imagesListForImageView } from "@helpers/fakeData";
 
 type Type = React.FC<{
-  images: string[]
-  vip?: boolean
-  onPressBack?: () => void
-}>
+  images: string[];
+  vip?: boolean;
+  onPressBack?: () => void;
+}>;
 
 const CarImageSlider: Type = ({ images, vip, onPressBack }) => {
-  const { width } = Dimensions.get("window")
-  const height = width * 0.7
-  const [active, setActive] = useState(0)
-  const scrollViewRef = useRef<ScrollView>(null)
-  const [visible, setIsVisible] = useState(false)
-  const [imageIndex, setImageIndex] = useState(0)
+  const { width } = Dimensions.get("window");
+  const height = width * 0.7;
+  const [active, setActive] = useState(0);
+  const scrollViewRef = useRef<ScrollView>(null);
+  const [visible, setIsVisible] = useState(false);
+  const [imageIndex, setImageIndex] = useState(0);
 
   // Function to update active image index every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prevActive) => {
-        const nextActive = prevActive === images.length - 1 ? 0 : prevActive + 1
+        const nextActive =
+          prevActive === images.length - 1 ? 0 : prevActive + 1;
         scrollViewRef.current?.scrollTo({
           x: width * nextActive,
           animated: true,
-        })
-        return nextActive
-      })
-    }, 5000)
+        });
+        return nextActive;
+      });
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [images.length, width])
+    return () => clearInterval(interval);
+  }, [images.length, width]);
 
   const onScrollChange = ({ nativeEvent }: any) => {
     const slide = Math.ceil(
       nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width
-    )
+    );
     if (slide !== active) {
-      setActive(slide)
+      setActive(slide);
     }
-  }
+  };
 
   return (
     <View className="">
@@ -82,12 +83,13 @@ const CarImageSlider: Type = ({ images, vip, onPressBack }) => {
         showsHorizontalScrollIndicator={false}
         style={{ width, height }}
       >
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <TouchableOpacity
             onPress={() => {
-              setIsVisible(true)
-              setImageIndex(index)
+              setIsVisible(true);
+              setImageIndex(index);
             }}
+            key={index}
           >
             <Image
               key={index}
@@ -98,7 +100,7 @@ const CarImageSlider: Type = ({ images, vip, onPressBack }) => {
         ))}
       </ScrollView>
       <View style={styles.pagination}>
-        {images.map((_, k) => (
+        {images?.map((_, k) => (
           <Text
             key={k}
             style={k == active ? styles.activeDot : styles.dot}
@@ -116,8 +118,8 @@ const CarImageSlider: Type = ({ images, vip, onPressBack }) => {
         onRequestClose={() => setIsVisible(false)}
       />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   pagination: {
@@ -134,6 +136,6 @@ const styles = StyleSheet.create({
     color: "#FFF",
     fontSize: 50,
   },
-})
+});
 
-export default CarImageSlider
+export default CarImageSlider;

@@ -10,7 +10,6 @@ import VerticalCarCart from "@src/components/car/VerticalCarCart";
 import Text from "@src/components/reusable/Text";
 import CarAdImage from "@src/components/car/CarAdImage";
 
-
 const Home: React.FC = () => {
   return (
     <Layout>
